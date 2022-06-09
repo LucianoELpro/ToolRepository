@@ -1,0 +1,83 @@
+NUGET : Microsoft.Extensions.Caching.StackExchangeRedis 5.01
+
+
+this code go in : Persistence:ServiceExtensions
+ #region Caching
+            service.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = configuration.GetValue<string>("Caching:RedisConnection");
+            });
+ #endregion
+
+
+
+
+DEPENDENCY INYECTION
+
+GetAllCustomerQueryHandler:
+
+ private readonly IDistributedCache _distributedCache;
+
+GetAllCustomerQueryHandler:
+ this._distributedCache = distributedCache;
+
+
+
+this code go in domain:
+
+ set
+            {
+                this._age = value;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+this code go in : Applications.Feautres.Customer.Queries.GetAllCustomers=Task<PagedResponse<List<CustomerDto>>> Handle
+-------------------------------------------------------------------------------------------------------------------------------
+
+ var cacheKey = $"CustomerList_{request.PageNumber}_{request.Name}_{request.Type}";
+
+            var dataList = new List<Domain.Entities.Productos>();
+
+            string dataSerializedList;
+
+            var RedisDataListByte = await _distributedCache.GetAsync(cacheKey);
+
+            if (RedisDataListByte != null)
+            {
+                // de bytes a string(Json) y de string(Json) objeto
+                dataSerializedList = Encoding.UTF8.GetString(RedisDataListByte);
+                dataList = JsonConvert.DeserializeObject<List<Domain.Entities.Productos>>(dataSerializedList);
+            }
+            else
+            {
+                dataList = await _repository.ListAsync(new PagedProductosSpecification(request.PageNumber, request.Name, request.Type));
+                // de objeto a string(Json) y de string(Json) a bytes
+                dataSerializedList = JsonConvert.SerializeObject(dataList);
+                RedisDataListByte = Encoding.UTF8.GetBytes(dataSerializedList);
+
+                var optionExpiration = new DistributedCacheEntryOptions()
+                                       .SetAbsoluteExpiration(DateTime.Now.AddMinutes(10))
+                                       .SetSlidingExpiration(TimeSpan.FromMinutes(2));
+
+                await _distributedCache.SetAsync(cacheKey, RedisDataListByte, optionExpiration);
+
+
+            }
+
+            var dataDto = _mapper.Map<List<ProductoDto>>(dataList);
+            return new PageResponse<List<ProductoDto>>(dataDto, request.PageNumber, 10);
+------------------------------------------------------------------------------------------------------------------------------
