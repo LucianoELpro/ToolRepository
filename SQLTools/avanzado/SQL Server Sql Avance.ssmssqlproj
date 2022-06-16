@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SQL Server Sql Avance">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="DESKTOP-LRVBRBD:sa">
+          <Created>2022-05-12T21:30:11.9135863-05:00</Created>
+          <Type>SQL</Type>
+          <Server>DESKTOP-LRVBRBD</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>AdventureWorks2017</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="CrossJoin.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>CrossJoin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Cursors.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Cursors.sql</FullPath>
+        </FileNode>
+        <FileNode Name="FiltrosAvanzados.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>FiltrosAvanzados.sql</FullPath>
+        </FileNode>
+        <FileNode Name="FullTextSearch.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>FullTextSearch.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Insert_Select.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Insert_Select.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Paginado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Paginado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="pivot.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>pivot.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RAISERROR.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>RAISERROR.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SpDinamicOutPut.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>SpDinamicOutPut.sql</FullPath>
+        </FileNode>
+        <FileNode Name="With-WaitFor.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-LRVBRBD:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-LRVBRBD</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>With-WaitFor.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items>
+        <FileNode Name="MDXQuery1.mdx">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery1.mdx</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
